@@ -15,5 +15,5 @@ jobs:
         run: cd banking && cmake -H. -B build && cmake --build build
 
       - name: Test
-        run: cd banking && cmake -H. -B build -DBUILD_TESTS=ON && cmake --build build --target test
+        run: ls /home/runner/work/tp-lab05/tp-lab05/banking/third-party/gtest && cd banking && cmake -H. -B build -DBUILD_TESTS=ON && cmake --build build --target test
 
