@@ -11,6 +11,8 @@ include_directories(
         "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>"
         )
 
+option(BUILD_TESTS "Build tests" ON)
+
 if(BUILD_TESTS)
   enable_testing()
   add_subdirectory(third-party/gtest)
