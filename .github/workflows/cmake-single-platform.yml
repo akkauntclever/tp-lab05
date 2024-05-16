@@ -15,5 +15,5 @@ jobs:
         run: cd banking && cmake -H. -B build && cmake --build build
 
       - name: Test
-        run: cd banking && git submodule add https://github.com/google/googletest third-party/gtest && cmake -H. -B build -DBUILD_TESTS=ON && cmake --build build --target test
+        run: cd banking && git submodule update --init --recursive third-party/gtest && cmake -H. -B build -DBUILD_TESTS=ON && cmake --build build --target test
 
