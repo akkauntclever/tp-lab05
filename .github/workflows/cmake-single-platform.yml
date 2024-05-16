@@ -15,5 +15,5 @@ jobs:
         run: cd banking && cmake -H. -B build && cmake --build build
 
       - name: Test
-        run: cmake -H. -B build -DBUILD_TESTS=ON && cmake --build build --target test
+        run: cd banking && cmake -H. -B build -DBUILD_TESTS=ON && cmake --build build --target test
 
