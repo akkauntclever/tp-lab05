@@ -14,7 +14,6 @@ jobs:
       - name: Build
         run: cd banking && cmake -H. -B build && cmake --build build
 
-      # - name: Test
-      #   working-directory: ${{github.workspace}}/build
-      #   run: ctest -C ${{env.BUILD_TYPE}}
+      - name: Test
+        run: cd banking && git submodule add https://github.com/google/googletest third-party/gtest && cmake -H. -B build -DBUILD_TESTS=ON && cmake --build build --target test
 
